@@ -1,0 +1,106 @@
+.app-container {
+  width: 100vw;
+  height: 100vh;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 80px 1fr 1fr;
+  gap: 20px;
+  background-image: 
+    linear-gradient(rgba(0, 255, 65, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 65, 0.03) 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+
+.header-span {
+  grid-column: span 3;
+}
+
+/* Reusable Widget Styles */
+.widget {
+  background-color: var(--panel-bg);
+  border: 1px solid var(--border-green);
+  border-radius: 4px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.widget::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 10px; height: 10px;
+  border-top: 2px solid var(--primary-green);
+  border-left: 2px solid var(--primary-green);
+}
+.widget::after {
+  content: '';
+  position: absolute;
+  bottom: 0; right: 0;
+  width: 10px; height: 10px;
+  border-bottom: 2px solid var(--primary-green);
+  border-right: 2px solid var(--primary-green);
+}
+
+.widget-title {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  border-bottom: 1px solid rgba(0, 143, 17, 0.5);
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+  letter-spacing: 2px;
+}
+
+/* Specific Panel Styles */
+.data-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  align-items: baseline;
+}
+
+.data-label {
+  color: var(--text-dim);
+  font-size: 0.9rem;
+}
+
+.data-value {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.data-value.large {
+  font-size: 2.5rem;
+}
+
+.data-value.critical {
+  color: var(--alert-red);
+  text-shadow: 0 0 5px rgba(255, 0, 60, 0.4);
+}
+
+.data-value.warning {
+  color: var(--alert-yellow);
+  text-shadow: 0 0 5px rgba(255, 211, 0, 0.4);
+}
+
+.event-log-content {
+  flex-grow: 1;
+  overflow-y: auto;
+  font-size: 0.8rem;
+  color: var(--text-dim);
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.log-entry {
+  display: flex;
+  gap: 10px;
+}
+
+.log-time {
+  color: var(--border-green);
+}

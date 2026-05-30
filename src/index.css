@@ -1,0 +1,40 @@
+:root {
+  --bg-color: #000000;
+  --panel-bg: #040804;
+  --primary-green: #00FF41; /* Classic readable matrix green */
+  --border-green: #008F11;
+  --text-dim: #00B32C;
+  --alert-red: #FF003C;
+  --alert-yellow: #FFD300;
+  
+  font-family: 'JetBrains Mono', 'Courier New', Courier, monospace;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--primary-green);
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  overflow: hidden; /* Avoid scrollbars in a dashboard */
+}
+
+h1, h2, h3, h4, p, span {
+  text-shadow: 0 0 5px rgba(0, 255, 65, 0.3);
+}
+
+.glow {
+  box-shadow: 0 0 10px rgba(0, 143, 17, 0.4);
+}
